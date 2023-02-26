@@ -29,14 +29,14 @@ section {
 .titulo {
   position: relative;
   font-size: 2em;
-  color: #d9411e;
-  margin-bottom: 12px;
+  color: #40372f;
+  margin-bottom: 24px;
 }
 .titulo::after {
   position: absolute;
   content: '';
   display: block;
-  background-color: #d9411e;
+  background-color: #40372f;
   width: 100%;
   height: 2px;
   bottom: 0;
@@ -98,5 +98,60 @@ header .menu-list a:hover::before {
 }
 #sobre .sobre-info p {
   font-size: 1.2rem;
+  color: #d9411e;
+}
+
+/* === PRODUTOS === */
+#produtos {
+  background-color: #d9cdbf;
+}
+
+#produtos .produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+#produtos .produto {
+  display: flex;
+  flex-direction: column;
+}
+#produtos .produto img {
+  margin-bottom: 12px;
+  object-fit: cover;
+}
+#produtos .produto h3 {
   color: #40372f;
+  font-size: 1.4em;
+  margin-bottom: 6px;
+}
+#produtos .produto span {
+  color: #40372f;
+  margin-bottom: 6px;
+}
+#produtos .produto a {
+  position: relative;
+  margin-top: auto;
+  background-color: #f2cb05;
+  color: #40372f;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-block: 5px;
+  margin-bottom: 6px;
+  z-index: 1;
+}
+#produtos .produto a::before {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: #f29f05;
+  width: 5%;
+  height: 100%;
+  top: 0;
+  left: 0px;
+  z-index: -1;
+  transition: 1s ease-in-out;
+}
+#produtos .produto a:hover::before {
+  width: 100%;
 }
