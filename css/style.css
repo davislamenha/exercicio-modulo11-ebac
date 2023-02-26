@@ -1,0 +1,166 @@
+/* === RESET === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* === GLOBAL === */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  width: min(100% - 30px, 1440px);
+  margin-inline: auto;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+section {
+  padding-block: 60px;
+}
+.titulo {
+  position: relative;
+  font-size: 2em;
+  color: #40372f;
+  margin-bottom: 24px;
+}
+.titulo::after {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: #40372f;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+}
+
+/* === HEADER === */
+header {
+  background-color: #f2cb05;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  padding-block: 12px;
+}
+header .container {
+  display: flex;
+  gap: 48px;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  color: #40372f;
+}
+header .menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+header .menu-list a {
+  position: relative;
+  font-size: 1.2em;
+  color: #40372f;
+  padding: 5px 10px;
+  z-index: 1;
+}
+header .menu-list a::before {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  background-color: #f29f05;
+  width: 100%;
+  height: 6px;
+  bottom: 8px;
+  left: 0;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+header .menu-list a:hover::before {
+  height: calc(100% - 14px);
+}
+
+/* === SOBRE === */
+#sobre {
+  background-color: #f2ede4;
+}
+#sobre .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+#sobre .container img {
+  border: 8px solid #d9411e;
+}
+#sobre .sobre-info p {
+  font-size: 1.2rem;
+  color: #d9411e;
+}
+
+/* === PRODUTOS === */
+#produtos {
+  background-color: #d9cdbf;
+}
+
+#produtos .produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+#produtos .produto {
+  display: flex;
+  flex-direction: column;
+}
+#produtos .produto img {
+  margin-bottom: 12px;
+  object-fit: cover;
+}
+#produtos .produto h3 {
+  color: #40372f;
+  font-size: 1.4em;
+  margin-bottom: 6px;
+}
+#produtos .produto span {
+  color: #40372f;
+  margin-bottom: 6px;
+}
+#produtos .produto a {
+  position: relative;
+  margin-top: auto;
+  background-color: #f2cb05;
+  color: #40372f;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-block: 5px;
+  margin-bottom: 6px;
+  z-index: 1;
+}
+#produtos .produto a::before {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: #f29f05;
+  width: 5%;
+  height: 100%;
+  top: 0;
+  left: 0px;
+  z-index: -1;
+  transition: 1s ease-in-out;
+}
+#produtos .produto a:hover::before {
+  width: 100%;
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 1024px) {
+  #sobre .container {
+    grid-template-columns: 1fr;
+  }
+}
