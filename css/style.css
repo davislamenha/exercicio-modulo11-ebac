@@ -158,6 +158,7 @@ header .menu-list a:hover::before {
   width: 100%;
 }
 
+/* === RESPONSIVIDADE === */
 @media (max-width: 1024px) {
   #sobre .container {
     grid-template-columns: 1fr;
