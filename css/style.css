@@ -51,6 +51,7 @@ header {
 }
 header .container {
   display: flex;
+  gap: 48px;
   justify-content: space-between;
   align-items: center;
 }
@@ -59,6 +60,7 @@ header h1 {
 }
 header .menu-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
 }
 header .menu-list a {
@@ -90,7 +92,7 @@ header .menu-list a:hover::before {
 }
 #sobre .container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
 #sobre .container img {
@@ -154,4 +156,10 @@ header .menu-list a:hover::before {
 }
 #produtos .produto a:hover::before {
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  #sobre .container {
+    grid-template-columns: 1fr;
+  }
 }
