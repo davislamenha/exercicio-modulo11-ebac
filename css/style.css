@@ -10,3 +10,54 @@ ul {
 a {
   text-decoration: none;
 }
+
+/* === GLOBAL === */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  width: min(100% - 30px, 1440px);
+  margin-inline: auto;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* === HEADER === */
+header {
+  background-color: #f2cb05;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  padding-block: 12px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .menu-list {
+  display: flex;
+  gap: 12px;
+}
+header .menu-list a {
+  position: relative;
+  font-size: 1.2em;
+  color: #40372f;
+  padding: 5px 10px;
+  z-index: 1;
+}
+header .menu-list a::before {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  background-color: #f29f05;
+  width: 100%;
+  height: 6px;
+  bottom: 8px;
+  left: 0;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+header .menu-list a:hover::before {
+  height: calc(100% - 14px);
+}
